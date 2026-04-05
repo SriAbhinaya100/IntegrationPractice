@@ -1,0 +1,15 @@
+<apex:page >
+    <script>
+        window.onload = onLoad;
+
+        function onLoad(){
+            const code = getUrlParamValue(window.location.href,'code');
+            location.href = '/lightning/n/HubSpot_Authenticate?c__code=' + code;
+        }
+
+        function getUrlParamValue(url, key){
+           return new URL(url).searchParams.get(key);
+        }
+
+    </script>
+</apex:page>
