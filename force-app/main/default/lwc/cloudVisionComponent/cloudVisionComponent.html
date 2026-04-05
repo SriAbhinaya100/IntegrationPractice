@@ -1,0 +1,9 @@
+<template>
+    <lightning-button label="Get Info" onclick={handleClick}></lightning-button>
+    <template lwc:if={data} for:each={data} for:item="item">
+        <div key={item.description}>
+            {item.description} - {item.score}
+        </div>
+
+    </template>
+</template>
